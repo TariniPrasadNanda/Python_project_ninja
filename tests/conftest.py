@@ -13,7 +13,7 @@ from utilities import ReadConfigurations
 #     return rep
 
 
-@pytest.fixture(scope="function")
+@pytest.fixture(scope="session")
 def setup(request):
     browser = ReadConfigurations.read_configuration("basic info", "browser")
     global driver
